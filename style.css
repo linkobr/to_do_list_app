@@ -1,0 +1,137 @@
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    background-color: var(--dark);
+    color:#FFFFFF;
+    font-family: 'Times New Roman';
+}
+
+/* sets the input and buttons to just appear as text on the screen  */
+input, button {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+img {
+    width: 16px;
+    height: 16px;
+}
+
+header {
+    padding: 32px 16px 32px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+/* # denotes an id */
+#new_task_form {
+    display: flex;
+}
+
+#new_task_input {
+    flex: auto;
+    background-color: var(--darker);
+    color: #FFFFFF;
+    padding: 16px;
+    border-radius: 32px;
+    margin-right: 16px;
+    font-size: 20px;
+}
+
+#new_task_submit {
+    filter: invert();
+}
+
+
+#new_task_submit:hover {
+    filter: opacity(50%);
+    cursor: pointer;
+}
+
+main {
+    flex: auto;
+    padding: 32px 16px 32px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* . denotes a class */
+.tasks_list {
+    padding: 16px;
+}
+
+.tasks_list h2 {
+    font-weight: 300;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+#tasks .task .content {
+    flex: auto;
+}
+
+
+#tasks .task .content .text {
+    display: block;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: 'Times New Roman';
+    font-weight: 300;
+    
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: var(--pink);
+}
+
+#tasks .task .actions {
+    display: flex;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 8px;
+}
+
+.task .actions .edit {
+    filter: invert();
+}
+
+.task .actions .delete {
+    filter: invert(15%) sepia(92%) saturate(4109%) hue-rotate(340deg) brightness(88%) contrast(96%);
+}
+
+.task .actions .edit:hover {
+    filter: invert() brightness(50%)
+}
+
+.task .actions .delete:hover {
+    filter: invert(15%) sepia(92%) saturate(4109%) hue-rotate(340deg) brightness(44%) contrast(96%);
+}
